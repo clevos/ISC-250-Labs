@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Parrot's Quiz</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="parrot.css">
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        label{
+            margin:0 0.5em;
+        }
+
+        main{
+            position: relative;
+            max-width: 600px;
+            min-height: 340px;
+            margin:0 auto;
+            border: 1px solid red;
+        }
+
+        .ani-frame{
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+
+        }
+
+        .ani-frame img{
+            object-fit: contain;
+        }
+
+        button{
+            position: absolute;
+            right: 5%;
+            bottom:  5%;
+            padding: 0.25em 0.75em;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body class="par-quiz">
+    <header>
+        <h1>🦜 Quiz 🦜</h1>
+    </header>
+
+    <main>
+        <div class="ani-frame me-hide">
+            <img src="ani-fireworks.gif">
+        </div>
+
+        <p>
+            Welcome to this four question quiz to test your knowledge about three different types of parrots.
+        </p>
+
+        <div class="quiz-item">
+            <div class="quiz-question">
+                <p id="question-container"></p>
+            </div>
+            <div class="quiz-answer">
+                <label><input id="ans-true" type="radio" name="answer" oninput="checkAnswer();">True</label>
+                <label><input id="ans-false" type="radio" name="answer" oninput="checkAnswer();">False</label>
+            </div>
+        </div>
+        <button type="button" class="me-hide" onclick="nextQuestion()">next question</button>
+    </main>
+
+    <footer>By Charles Levos</footer>
+
+    <script src="parrotquiz.js"></script>
+</body>
+
+</html>

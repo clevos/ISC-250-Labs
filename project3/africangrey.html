@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>African Grey Parrot</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+    main {
+        margin-left: 150px;
+
+    }
+    </style>
+</head>
+
+<body class="par-african">
+    <div class="jumbotron text-center p-2 m-1">
+        <h1>African Grey Parrot vue.js page</h1>
+    </div>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>African Grey Lifespan</h1>
+                    <div id="app_loops" class="experiment-block">
+                        <ul>
+                            <li v-for="x in todos">
+                                {{ x.text }}
+                            </li>
+                        </ul>
+                    </div>
+                    <script>
+                    new Vue({
+                        el: '#app_loops',
+                        data: {
+                            todos: [{
+                                    text: '40-60 years as pets',
+                                },
+                                {
+                                    text: 'Outside captivity lifespan is shorter by a-lot',
+                                },
+                            ],
+                        },
+                    });
+                    </script>
+                    <!-- <ul>
+                        <li>40-60 years as pets</li>
+                        <li>Outside captivity lifespan is shorter by a-lot</li>
+                    </ul> -->
+
+                    <h2>Diet</h2>
+                    <!-- <ul> -->
+                        <!-- <li>Fruit</li> -->
+                        <!-- <li>seeds</li> -->
+                        <!-- <li>bird pellets</li> -->
+                    <!-- </ul>  -->
+
+                    <div id="Diet" class="experiment-block">
+                        <ul>
+                            <li v-for="x in todos">
+                                {{ x.text }}
+                            </li>
+                        </ul>
+                    </div>
+                   <script>
+                    new Vue({
+                        el: '#Diet',
+                        data: {
+                            todos: [{
+                                    text: 'Fruit',
+                                },
+                                {
+                                    text: 'seeds',
+                                },
+                                 {
+                                    text: 'bird pellets',
+                                },
+                            ],
+                        },
+                    });
+                    </script>
+                    <h2>Relationship</h2>
+                     <div id="Relationship" class="experiment-block">
+                        <ul>
+                            <li v-for="x in todos">
+                                {{ x.text }}
+                            </li>
+                        </ul>
+                    </div>
+                   <script>
+                    new Vue({
+                        el: '#Relationship',
+                        data: {
+                            todos: [{
+                                    text: 'Clones human speech well',
+                                },
+                                {
+                                    text: 'May expreience behavior issues if not to the person',
+                                },
+                                 {
+                                    text: 'very smart',
+                                },
+                                {
+                                    text: 'Shares meals with other birds',
+                                },
+                            ],
+                        },
+                    });
+                    </script>
+                    <!-- <ul>
+                        <li>Clones human speech well</li>
+                        <li>May experience behavior issues if not used to the person</li>
+                        <li>Very smart</li>
+                        <li>Shares meals with other birds</li>
+                    </ul> -->
+                    <h2>Housing</h2>
+                    <!--
+                    <ul>
+                        <li>Cage minimal 2 foot deep by 3 feet wide by 4 feet high</li>
+                        <li>It has playpen top with a dish</li>
+                        <li>They also always need to be flying around out of the cage</li>
+                    </ul> -->
+                    <div id="Housing" class="experiment-block">
+                        <ul>
+                            <li v-for="x in todos">
+                                {{ x.text }}
+                            </li>
+                        </ul>
+                    </div>
+                   <script>
+                    new Vue({
+                        el: '#Housing',
+                        data: {
+                            todos: [{
+                                    text: 'Cage minimal 2 foot deep by 3 feet wide by 4 feet high',
+                                },
+                                {
+                                    text: 'It has a playpen top with a dish',
+                                },
+                                 {
+                                    text: 'They also always need to be flying around out of the cage',
+                                },
+                               
+                            ],
+                        },
+                    });
+                    </script>
+                </div>
+                <div class="col-sm-6">
+                    <div class="img-frame">
+                        <img alt="African Grey Parrot" src="https://lafeber.com/pet-birds/wp-content/uploads/2013/06/African-Grey.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span>User interaction</span>
+        <p style="white-space: pre-line;">{{ message }}</p>
+        <br>
+        <textarea v-model="message" placeholder="add multiple lines"></textarea>
+    </main>
+    <footer>By Charles Levos</footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js">
+    <div v-if="type === 'A'">
+  A
+</div> <
+    div v -
+        else -
+            if = "type === 'B'" > B
+        <
+        /div> <
+    div v -
+        else -
+            if = "type === 'C'" > C
+        <
+        /div> <
+    div v -
+        else >
+            Not A / B / C <
+            /div>
+
+            <
+            div v -
+            Now you see me <
+            /div> <
+            div v -
+            else >
+                Now you don 't  <
+                /div>
+    alert('one of best talking parrots!');
+    console.log("My African Grey Home Page");
+    </script>
+</body>
+
+</html>

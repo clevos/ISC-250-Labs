@@ -1,0 +1,26 @@
+body{
+	background-color: red;
+}
+
+h1{
+	background-color: lightblue;
+	text-align: center;
+	padding:1em;
+}
+
+h2{
+	background-color: lightblue;
+	text-align: center;
+}
+
+li{
+	text-align: center;
+	margin:2em;
+	list-style-position: inside;
+	color: red;
+}
+
+ul{
+	text-align: center;
+
+}

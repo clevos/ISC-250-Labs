@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <!--
+        Charles Levos
+        ISC 250
+        Project 3
+    -->
+    <title>Parrot's Quiz</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!--     <link rel="stylesheet" href="parrot.css">
+ -->
+    <style>
+        p {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        label{
+            margin:0 0.5em;
+        }
+
+        main{
+            position: relative;
+            max-width: 600px;
+            min-height: 340px;
+            margin:0 auto;
+            border: 1px solid red;
+        }
+
+        .ani-frame{
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+
+        }
+
+        .ani-frame img{
+            object-fit: contain;
+        }
+
+        button{
+            position: absolute;
+            right: 5%;
+            bottom:  5%;
+            padding: 0.25em 0.75em;
+            background-color: lightblue;
+        }
+
+        .me-hide {
+    display: none;
+}
+
+        .me-blue {
+    color: blue;
+}
+
+    .ani-frame img{
+        display: block;
+        width:100%;
+        height: auto;
+    }
+
+    .quiz-item{
+        margin: 0 auto;
+    }
+
+    .quiz-item div{
+        margin: 0 auto;
+    }
+    </style>
+</head>
+
+<body class="par-quiz">
+    <div class="jumbotron text-center p-2 m-1">
+        <h1>🦜 Quiz Vue.js 🦜</h1>
+    </div>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="ani-frame me-hide">
+                    <img src="ani-fireworks.gif">
+                </div>
+                
+                <div id="Quiz_Questions" class="experiment-block">
+                    <ul>
+                        <li v-for="x in todos">
+                            {{ x.text }}
+                        </li>
+                    </ul>
+                </div>
+                <script>
+                    new Vue({
+                        el: '#Quiz_Questions',
+                        data: {
+                            todos: [{
+                                    text: ' Welcome to this four question quiz to test your knowledge about three different types of parrots.',
+                                },
+                                
+                            ],
+                        },
+                    });
+                    </script>
+                <div class="quiz-item">
+                    <div class="quiz-question">
+                        <p id="question-container"></p>
+                    </div>
+                    <div class="quiz-answer">
+                        <!--  <label><input id="ans-true" type="radio" name="answer" oninput="checkAnswer();">True</label>
+                        <label><input id="ans-false" type="radio" name="answer" oninput="checkAnswer();">False</label> -->
+                        <label for="Yes">
+                            <input type="radio" name="answer" value="True" id="ans-true" oninput="checkAnswer();" />
+                            True
+                        </label>
+                        <label for="False">
+                            <input type="radio" name="answer" value="False" id="ans-false" oninput="checkAnswer();" />
+                            False</label>
+                    </div>
+                </div>
+                <button type="button" class="me-hide" onclick="nextQuestion()">next question</button>
+            </div>
+        </div>
+        <span>User interaction</span>
+        <p style="white-space: pre-line;">{{ message }}</p>
+        <br>
+        <textarea v-model="message" placeholder="add multiple lines"></textarea>
+    </main>
+    <footer>By Charles Levos</footer>
+    <script src="parrotquiz.js"></script>
+</body>
+
+</html>

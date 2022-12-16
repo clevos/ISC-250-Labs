@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <!--
+    Charles Levos
+    ISC 250
+    Project 2-->
+    <title>My Blue Macaw Parrot Web Page</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body class="par-blue-macaw">
+    <div class="jumbotron text-center p-2 m-1">
+        <h1> Blue and Yellow Macaww Parrot vue.js page</h1>
+    </div>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div id="app_loops" class="experiment-block">
+                        <ul>
+                            <li v-for="x in todos">
+                                {{ x.text }}
+                            </li>
+                        </ul>
+                    </div>
+                    <script>
+                    new Vue({
+                        el: '#app_loops',
+                        data: {
+                            todos: [{
+                                    text: 'Life span 30-35 years',
+                                },
+                                {
+                                    text: 'Blue and Yellow Macaw is a South American Parrot',
+                                },
+                                 {
+                                    text: 'Usually the top of the head is blue and the body gold with orange under tones, their beaks are black as well as under their chin and their feet are black colored',
+                                },
+                                 {
+                                    text: 'The birds can reach approxmently 30 to 34 inches and weigh two three pounds',
+                                },
+                                {
+                                    text: 'Blue and Yellow Macaw are endangered',
+                                },
+                            ],
+                        },
+                    });
+                    </script>
+                    <!-- <ul>
+                        <li>Life span 30-35 years</li>
+                        <li>Blue and Yellow Macow is a South American Parrot</li>
+                        <li>Usually the top of the head is blue and the body gold with orange under tones, their beaks are black as well as under their chin and their feet are black colored</li>
+                        <li>The birds can reach approxmently 30 to 34 inches and weigh two three pounds</li>
+                        <li>Blue and Yellow Macow are endangered</li>
+                    </ul> -->
+                    
+                    <!-- <h2>Diet</h2> -->
+                    <!-- <ul>
+                        <li>Healthy Macow will consume around 10 to 15%  of it's own body weight daily</li>
+                        <li>Seeds</li>
+                        <li>Different Plants</li>
+                        <li>fruits</li>
+                        <li>nuts</li> -->
+                    <!-- </ul> -->
+                 <h2>Diet</h2>
+                   
+
+                    <div id="Diet" class="experiment-block">
+                        <ul>
+                            <li v-for="x in todos">
+                                {{ x.text }}
+                            </li>
+                        </ul>
+                    </div>
+                   <script>
+                    new Vue({
+                        el: '#Diet',
+                        data: {
+                            todos: [{
+                                    text: 'Healthy Macow will consume around 10 to 15%',
+                                },
+                                {
+                                    text: 'seeds',
+                                },
+                                 {
+                                    text: 'Different Plants',
+                                },
+                                {
+                                    text: 'fruits',
+                                },
+                                {
+                                    text: 'nuts',
+                                },
+                            ],
+                        },
+                    });
+                    </script>
+
+                    <h2>Housing</h2>
+                  
+                     <div id="Housing" class="experiment-block">
+                        <ul>
+                            <li v-for="x in todos">
+                                {{ x.text }}
+                            </li>
+                        </ul>
+                    </div>
+                   <script>
+                    new Vue({
+                        el: '#Housing',
+                        data: {
+                            todos: [{
+                                    text: 'Cage must be minimum at least 5 feet tall and at least 3 or 4 foot wide and long',
+                                },                               
+                            ],
+                        },
+                    });
+                    </script>
+
+                    <h2>Training</h2>
+                    <div id="Training" class="experiment-block">
+                        <ul>
+                            <li v-for="x in todos">
+                                {{ x.text }}
+                            </li>
+                        </ul>
+                    </div>
+
+                  <!--  <ul>
+                        <li>Blue and Yellow Parrot needs 15 to 20 minutes of training a day</li>
+                        <li>Ignore the bird negative behavior</li>
+                        <li>Be expressive</li>
+                        <li>Speak softly</li>
+                        <li>Place bird in cage or perch</li>
+                    </ul> -->
+                    <script>
+                    new Vue({
+                        el: '#Training',
+                        data: {
+                            todos: [{
+                                    text: 'Blue and Yellow Parrot needs 15 to 20 minutes of training a day',
+                                },
+                                {
+                                    text: 'Ignore the bird negative behavior',
+                                },
+                                 {
+                                    text: 'Be expressive',
+                                },
+                                {
+                                    text: 'Speak softly',
+                                },
+                                {
+                                    text: 'Place bird in cage or perch',
+                                },
+                            ],
+                        },
+                    });
+                    </script>
+                    <h2>Temperament</h2>
+                    <ul>
+                        <li>They are socialable, but have to warm up to strangers</li>
+                        <li>Intelligent and have a willingness to learn</li>
+                    </ul>
+                    <script>
+                    new Vue({
+                        el: '#Temperament',
+                        data: {
+                            todos: [{
+                                    text: 'They are socialable, but have to warm up to strangers',
+                                },
+                                {
+                                    text: 'Intelligent and have a willingness to learn',
+                                },
+                            ],
+                        },
+                    });
+                    </script>
+                </div>
+                <div class="col-sm-6">
+                    <img src="picturesofparrots/blue-macaw.jpeg" alt="Good blue-macaw.">
+                </div>
+            </div>
+        </div>
+         <span>User interaction</span>
+<p style="white-space: pre-line;">{{ message }}</p>
+<br>
+<textarea v-model="message" placeholder="add multiple lines"></textarea>
+
+    </main>
+    <script>
+        alert('Beautiful Colorful Parrot');
+        console.log("My Blue Macaw Parrot");
+    </script>
+    <h2>Audio element</h2>
+    <p>Click on the play button to play a sound:</p>
+    <audio controls>
+        <source src="https://youtu.be/Mbm2KfvuILA" type="blue-macaw/mpeg">
+    </audio>
+    <footer>By Charles Levos</footer>
+</body>
+
+</html>

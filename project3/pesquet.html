@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <!--
+        Charles Levos
+         ISC 250
+    Project 2-->
+    <title>My Pesquet parrot Web Page</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="parrot.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body class="par-pesquet">
+    <div class="jumbotron text-center p-2 m-1">
+        <h1>My Pesquet parrot vue.js</h1>
+    </div>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Introduction</h2>
+                    <!--  <ul>
+                        <li>Colors are black with greyish scaling to it's chest and it has a red belly uppertail </li>
+                        <li>Tiny eyes than other parrots</li>
+                        <li>Travels in packs</li>
+                        <li>It's usually called gothic bird on earth</li>
+                    </ul> -->
+                    <div id="Introduction" class="experiment-block">
+                        <ul>
+                            <li v-for="x in todos">
+                                {{ x.text }}
+                            </li>
+                        </ul>
+                    </div>
+                    <script>
+                    new Vue({
+                        el: '#Introduction',
+                        data: {
+                            todos: [{
+                                    text: 'Colors are black with greyish scaling to its chest and it has a red belly uppertail',
+                                },
+                                {
+                                    text: 'Tiny eyes than other parrots',
+                                },
+                                {
+                                    text: 'Travels in packs',
+                                },
+                                {
+                                    text: 'Its usually called gothic bird on earth',
+                                },
+
+                            ],
+                        },
+                    });
+                    </script>
+                    <h2>Height</h2>
+                    <div id="Height" class="experiment-block">
+                        <ul>
+                            <li v-for="x in todos">
+                                {{ x.text }}
+                            </li>
+                        </ul>
+                    </div>
+                    <script>
+                    new Vue({
+                        el: '#Height',
+                        data: {
+                            todos: [{
+                                    text: 'It is 18 inches long and weights between 24-28oz',
+                                },
+
+
+                            ],
+                        },
+                    });
+                    </script>
+                    <h2>Status Of The Bird</h2>
+                    <div id="Status" class="experiment-block">
+                        <ul>
+                            <li v-for="x in todos">
+                                {{ x.text }}
+                            </li>
+                        </ul>
+                    </div>
+                    <script>
+                    new Vue({
+                        el: '#Status',
+                        data: {
+                            todos: [{
+                                text: 'It in trouble because of it feathers',
+                            }, ],
+                        },
+                    });
+                    </script>
+                    <h2>Diet</h2>
+                    <div id="Diet" class="experiment-block">
+                        <ul>
+                            <li v-for="x in todos">
+                                {{ x.text }}
+                            </li>
+                        </ul>
+                    </div>
+                    <script>
+                    new Vue({
+                        el: '#Diet',
+                        data: {
+                            todos: [{
+                                    text: 'Eats figs and flowers, nector',
+                                },
+
+
+                            ],
+                        },
+                    });
+                    </script>
+                    <h2>Mobility</h2>
+                    <div id="Mobility" class="experiment-block">
+                        <ul>
+                            <li v-for="x in todos">
+                                {{ x.text }}
+                            </li>
+                        </ul>
+                    </div>
+                    <script>
+                    new Vue({
+                        el: '#Mobility',
+                        data: {
+                            todos: [{
+                                    text: 'Jumping from branch to branch',
+                                },
+
+
+                            ],
+                        },
+                    });
+                    </script>
+                </div>
+                <div class="col-sm-6">
+                    <aside>
+                        <img src="picturesofparrots/dracula parrot.jpeg" alt="beutiful Pesquet parrot.">
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>By Charles Levos</footer>
+    <script>
+    alert('Welcome to beautiful Pesquet Parrot');
+    console.log("My Pesquet Parrot");
+    </script>
+</body>
+
+</html>
